@@ -1,0 +1,24 @@
+'''
+Magnus Chiu
+CIS 41A Spring 2022
+Unit J Exercise J
+'''
+
+1. 
+a. A*
+b. A+
+c. A?
+d. A{2,3}
+
+2. 
+a. ABBB
+b. ABABAB
+
+
+3. 
+a. No
+b. No
+c. No
+d. No
+
+4. ^.{3}$
