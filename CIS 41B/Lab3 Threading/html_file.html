@@ -1,0 +1,1351 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta name="DC.language" content="EN-US" >
+    <meta name="DC.creator" content="US Department of Commerce, NOAA, Global Monitoring Laboratory" >
+
+    
+    <meta name="DC.date.created"  content="2005-10-01" >
+    <meta name="DC.date.reviewed" content="2022-05-23" >
+
+
+    <meta name="keywords" content="noaa, national oceanic and atmospheric administration, earth system research, esrl, gml, gmd, climate, air quality, numerical modeling, global warming, climate change, ozone, co2, aerosols">
+
+
+    <meta name="description" content="The Global Monitoring Laboratory conducts research on greenhouse gas and carbon cycle feedbacks, changes in clouds, aerosols, and surface radiation, and recovery of stratospheric ozone. ">
+    <meta name="DC.description" content="The Global Monitoring Laboratory conducts research on greenhouse gas and carbon cycle feedbacks, changes in clouds, aerosols, and surface radiation, and recovery of stratospheric ozone. ">
+
+
+
+
+    <title>NOAA Global Monitoring Laboratory - THE NOAA ANNUAL GREENHOUSE GAS INDEX (AGGI)</title>
+    <meta name="DC.title" content="NOAA Global Monitoring Laboratory - THE NOAA ANNUAL GREENHOUSE GAS INDEX (AGGI)" >
+
+
+
+    <!-- Bootstrap -->
+<!--
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+-->
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- more css -->
+    <link href="/css/gmd.css" rel="stylesheet" media="all">
+    <link href="/css/header.css" rel="stylesheet" media="all">
+    <link href="/css/footer.css" rel="stylesheet" media="all">
+    <link href="/css/colors.css" rel="stylesheet" media="all">
+    <!--    <link href="/css/buttons.css" rel="stylesheet" media="all"> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<!--<link href="/css/collapse.css" rel="stylesheet" media="all"> -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!--
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+-->
+
+    <script src="/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+  <body>
+
+    
+<div id="major_header">
+
+    <div id="search" class="d-none d-md-block float-right">
+        <form action="https://search.usa.gov/search">
+	    <div class="form-group mb-1">
+		<input type="hidden" name="affiliate" value="noaa_esrl_gmd">
+		<input type="hidden" name="v:project" value="firstgov" >
+		<div class="input-group mb-1">
+		    <input type="text" name="query" id="query-field" autocomplete="off" class='form-control input-xs' placeholder="Search GML...">
+		    <div class="input-group-append">
+			<button type="submit" id='searchbutton' class="btn btn-secondary btn-sm"><i class="fa fa-search"></i><span class='sr-only'>Search</span></button>
+		    </div>
+		    <label for="query-field" class="sr-only"> Search GML:</label>
+		</div>
+	    </div>
+        </form>
+    </div>
+
+    <a href="http://www.noaa.gov" title="NOAA">
+        <img src="/webdata/logos/noaa_small.png" class="header_logo" alt='noaa logo'>
+    </a>
+
+    <div id='navbar-brand-title'>
+	<a href="/" title="GML" class="lab">Global Monitoring Laboratory</a><br>
+	<a href="https://www.esrl.noaa.gov" title="ESRL Home Page" class="division" >Earth System Research Laboratories</a>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+    
+<nav class="navbar navbar-gmd navbar-expand-lg navbar-dark sticky-topxxx">
+  <a class="navbar-brand d-lg-none" href="#">Menu</a> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+<div class="container">
+
+  <div id="navbarNavDropdown" class="collapse navbar-collapse majornav">
+    <ul class="navbar-nav ml-auto mr-auto">
+
+	<li class="nav-item">
+<a href="/" class='nav-link' title='GML Home Page'>
+<span class='fa fa-home'></span><span class='d-lg-none'> Home</span>
+</a>
+</li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" id="navbarabout" data-toggle="dropdown">About</a>
+		 <div class="dropdown-menu shadow collapse" aria-labelledby="navbarabout">
+			<a href="/about/aboutgml.html" class="dropdown-item">About GML</a>
+			<a href="/about/deia.html" class="dropdown-item">Diversity, Equity, and Inclusion</a>
+			<a class="dropdown-item" href="/review/">Science Reviews</a>
+			<a class="dropdown-item" href="/safety/">Safety Program</a>
+			<!--			<a href="http://www.esrl.noaa.gov/about/jobs.html" class="dropdown-item">Employment</a> -->
+			<a href="/about/jobs.html" class="dropdown-item">Employment</a>
+			<a href="https://www.boulder.noaa.gov/" class="dropdown-item">Visiting</a>
+			<a href="/about/contacts.html" class="dropdown-item">Contact Us</a>
+			<!--			<a href="https://sites.google.com/a/noaa.gov/oar-esrl-gmd-intranet/"  class="dropdown-item">Intranet</a> -->
+			<a href="https://sites.google.com/noaa.gov/oar-gml-intranet/home"  class="dropdown-item">Intranet</a>
+		</div>
+	</li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" id="navbarpeople" data-toggle="dropdown">People</a>
+		 <div class="dropdown-menu shadow collapse" aria-labelledby="navbarpeople">
+			<a href="/about/orgchart.html" class="dropdown-item">Organization</a>
+			<a href="/about/stafflist.html" class="dropdown-item">Staff</a>
+			<a href="/about/stafflist_group.html" class="dropdown-item">Staff by Division</a>
+			<a href="/about/employees.html" class="dropdown-item">Employee Spotlight</a>
+		</div>
+	</li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" id="navbarresearch" data-toggle="dropdown">Research</a>
+		<div class="dropdown-menu shadow" aria-labelledby="navbarresearch">
+			<a class="dropdown-item" href="/about/research.html">Research Overview</a>
+			<a class="dropdown-item" href="/ccgg/">Greenhouse Gases</a>
+			<a class="dropdown-item" href="/hats/">Halocarbons and Trace Gases</a>
+			<a class="dropdown-item" href="/ozwv/">Ozone and Water Vapor</a>
+			<a class="dropdown-item" href="/grad/">Global Radiation and Aerosols</a>
+			<a class="dropdown-item" href="/publications/">Publications</a>
+		</div>
+	</li>
+
+	<li class="nav-item dropdown mega-dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Observing Networks</a>
+		<div class="dropdown-menu shadow mega-dropdown-menu wide-menuxx">
+<div class="row">
+<div class="col col-lg-3 bro">
+			<span class="menu-header ml-2">Overview</span>
+	<a class="dropdown-item" href="/about/networks.html">Observations Overview</a>
+	<a class="dropdown-item" href="/dv/site/">Measurement Sites</a>
+			<a class="dropdown-item" href="/about/campaigns.html">Field Campaigns</a>	
+</div>
+		<div class="col col-lg-4 bro">
+			<span class="menu-header ml-2">Atmospheric Baseline Observatories</span>
+			<a class="dropdown-item" href="/obop/">Observatory Operations</a>
+			<a class="dropdown-item" href="/obop/brw/">Barrow, Alaska</a>
+			<a class="dropdown-item" href="/obop/mlo/">Mauna Loa, Hawaii</a>
+			<a class="dropdown-item" href="/obop/smo/">American Samoa</a>
+			<a class="dropdown-item" href="/obop/spo/">South Pole</a>
+		</div>
+		<div class="col col-lg-5">
+			<span class="menu-header ml-2">Observing Networks</span>
+			<a class="dropdown-item" href="/ccgg/about.html">Greenhouse Gas Reference Network</a>
+			<a class="dropdown-item" href="/hats/flask/flasks.html">Halocarbons and Trace Gases</a>
+			<a class="dropdown-item" href="/grad/field.html">Surface Radiation</a>
+			<a class="dropdown-item" href="/aero/net/">Federated Aerosol Network</a>
+			<a class="dropdown-item" href="/ozwv/network.php">Ozone</a>
+			<a class="dropdown-item" href="/ozwv/wvap">Water Vapor</a>
+		</div>
+</div>
+</div>
+
+        </li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" id="navbardata" data-toggle="dropdown">Data</a>
+		<div class="dropdown-menu shadow" aria-labelledby="navbarpeople">
+			<span class="menu-header ml-2">Data</span>
+			<a class="dropdown-item" href="/aftp/data/">Browse Data Archive</a>
+			<a class="dropdown-item" href="/dv/data/">Search for Data</a>
+			<a class="dropdown-item" href="/dv/data.html">Data by Research Program</a>
+			<a class="dropdown-item" href="/dv/site/">Measurement Sites</a>
+			<a class="dropdown-item" href="/ccgg/obspack/">ObsPack</a>
+			<span class="menu-header ml-2">Tools</span>
+			<a class="dropdown-item" href="/dv/iadv/">Data Viewer</a>
+			<a class="dropdown-item" href="/grad/solcalc/">Solar Calculator</a>
+			<span class="menu-header ml-2">Visualization</span>
+			<a class="dropdown-item" href="/dv/visualize.html">Data Visualization Pages</a>
+			<a class="dropdown-item" href="/dv/spo_oz/">South Pole Ozone Hole</a>
+		</div>
+        </li>
+
+	<li class="nav-item dropdown mega-dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Products</a>
+		
+<div class="dropdown-menu shadow mega-dropdown-menu">
+    <div class="row">
+        <div class="col bro">
+            <span class="menu-header ml-2">Products</span>
+            <a class="dropdown-item" href="/aggi/">Greenhouse Gas Index</a>
+            <a class="dropdown-item" href="/odgi/">Ozone Depletion Index</a>
+            <a class="dropdown-item" href="/ccgg/ghgpower/">Power of Greenhouse Gases</a>
+            <a class="dropdown-item" href="/ccgg/trends/">Trends in CO<sub>2</sub>, CH<sub>4</sub>, N<sub>2</sub>O, SF<sub>6</sub></a>
+            <a class="dropdown-item" href="/ccgg/carbontracker/">CarbonTracker</a>
+            <a class="dropdown-item" href="/hats/US_emissiontracker/">US Potent GHG Tracker</a>
+            <a class="dropdown-item" href="/ccgg/obspack/">ObsPack</a>
+            <a class="dropdown-item" href="/grad/mloapt.html">Mauna Loa Apparent Transmission</a>
+            <a class="dropdown-item" href="/grad/snomelt.html">Barrow Snow Melt Dates</a>
+	    <a class="dropdown-item" href="/dv/spo_oz/">South Pole Ozone Hole</a>
+        </div>
+        <div class="col">
+            <span class="menu-header ml-2">Calibration Facilities</span>
+	    <a class="dropdown-item" href="/ccl/">WMO Central Calibration Laboratory</a>
+	    <a class="dropdown-item" href="/grad/calfacil/">Central UV Calibration Facility</a>
+	    <a class="dropdown-item" href="/grad/srf.html">Broadband Solar Calibration Facility</a>
+	    <a class="dropdown-item" href="/ozwv/dobson/">World Dobson Ozone Calibration Centre</a>
+        </div>
+    </div>
+</div>
+
+        </li>
+
+	<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Information</a>
+    
+		<div class="dropdown-menu shadow dropdown-menu-right">
+			<a class="dropdown-item" href="/news/">News</a>
+			<a class="dropdown-item" href="/about/seminars.php">Seminars</a>
+			<a class="dropdown-item" href="/education/">Education/Outreach</a>
+			<a class="dropdown-item" href="/interns/">Student Opportunities</a>
+			<a class="dropdown-item" href="/education/faq_cat-1.html">FAQ's</a>
+			<a class="dropdown-item" href="/publications/">Publications</a>
+
+                        <span class="menu-header">Webcams</span>
+                        <a class="dropdown-item" href="/obop/spo/livecamera.html">South Pole Webcam</a>
+                        <a class="dropdown-item" href="/obop/mlo/livecam/livecam.html">Mauna Loa Webcams</a>
+                        <a class="dropdown-item" href="/obop/brw/livecamera.html">Barrow Webcam</a>
+
+			<span class="menu-header">Global Monitoring Annual Conference</span>
+			<a class="dropdown-item" href="/gmac/">
+				<div class="media">
+					<img class="mr-1 mt-1" src="/images/gmac_logo_vsmall.png" alt="GMAC">
+					<div class="media-body">
+						The 51<sup>st</sup> Conference will be <br>held May 23 - 24, 2023
+					</div>
+				</div>
+			</a>
+		</div>
+	</li>
+
+    </ul>
+    <div id="search" class="d-lg-none">
+        <form action="https://search.usa.gov/search">
+            <div class="form-group mb-1">
+                <input type="hidden" name="affiliate" value="noaa_esrl_gmd">
+                <input type="hidden" name="v:project" value="firstgov" >
+                <div class="input-group mb-1">
+                    <input type="text" name="query" id="query-field2" autocomplete="off" class='form-control input-xs' placeholder="Search GML...">
+                    <div class="input-group-append">
+                        <button type="submit" id='searchbutton' class="btn btn-secondary btn-sm"><i class="fa fa-search"></i><span class='sr-only'>Search</span></button>
+                    </div>
+                    <label for="query-field2" class="sr-only"> Search GML:</label>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+  </div>
+</nav>
+
+
+
+
+    <div class="container">
+
+
+
+	
+
+
+<div class="pageheader">Annual Greenhouse Gas Index (AGGI)</div>
+
+<div class='col-12 col-lg-10 offset-lg-1 mb-4'>
+
+  <div class="text-center">
+    <h3>THE NOAA ANNUAL GREENHOUSE GAS INDEX (AGGI)</h3>
+    <p><i>NOAA Global Monitoring Laboratory, R/GMD, 325 Broadway, Boulder, CO 80305-3328</i><br>
+    Contact:
+    <a href="mailto:Stephen.A.Montzka@noaa.gov">Stephen.A.Montzka@noaa.gov</a>
+    </p>
+    <span class="small">Updated Spring 2022</span>
+  </div>
+
+
+
+<center>
+	<div class="row">
+                <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+  <p class="graybox smaller font-italic text-center mt-4">
+The AGGI is a measure of the climate-warming influence of long-lived trace gases in the atmosphere and how that influence has changed since the onset of the industrial revolution.  The index was designed to enhance the connection between scientists and society by providing a normalized standard that can be easily understood and followed. The warming influence of long-lived greenhouse gases is well understood by scientists and has been reported by NOAA through a range of national and international assessments. Nevertheless, the language of scientists often eludes policy makers, educators, and the general public. This index is designed to help bridge that gap.  The AGGI provides a way for this warming influence to be presented as a simple index.
+</p>
+		</div>
+	</div>
+</center>
+
+<div class="article">
+
+  <h3>Introduction</h3>
+
+  <p>
+Increases in the abundance of atmospheric greenhouse gases since the industrial revolution are mainly the result of human activity and are largely responsible for the observed increases in global temperature <i>[IPCC 2014]</i>. Because climate projections have large model uncertainties that overwhelm the uncertainties in greenhouse gas measurements, we present here an observationally based index that is proportional to the change in the direct warming influence since the onset of the industrial revolution (also known as climate forcing) supplied from these gases.  This index is based on the observed amounts of long-lived greenhouse gases in the atmosphere and contains little uncertainty. 
+  </p>
+
+  <p>
+  The Intergovernmental Panel on Climate Change (IPCC) defines climate forcing as &ldquo;An externally imposed perturbation in the radiative energy budget of the Earth climate system, e.g. through changes in solar radiation, changes in the Earth albedo, or changes in atmospheric gases and aerosol particles.&rdquo; Thus, climate forcing is a &ldquo;change&rdquo; in the status quo, forcing changes in the climate. IPCC takes the pre-industrial era (chosen as the year 1750) as the baseline, although some argue that 1800 is more <a href='/ccgg/ghgpower/'>representative</a>. The perturbation to direct climate forcing (also termed &ldquo;radiative forcing&rdquo;) that has the largest magnitude and the smallest scientific uncertainty is the forcing related to changes in the atmospheric global abundance of long-lived, well mixed, greenhouse gases, in particular, carbon dioxide (CO<sub>2</sub>), methane (CH<sub>4</sub>), nitrous oxide (N<sub>2</sub>O), and halogenated compounds (mainly CFCs). 
+  </p>
+
+  <p>
+Measured global atmospheric abundances of greenhouse gases are used to calculate changes in radiative forcing beginning in 1979 when NOAA's global air sampling network expanded significantly. The change in annual average total radiative forcing by all the long-lived greenhouse gases since the pre-industrial era is also used to define the NOAA Annual Greenhouse Gas Index (AGGI), which was introduced in 2006 based on measurements through 2004 <i>[Hofmann et al., 2006a]</i> and is updated annually.
+  </p>
+
+
+  <h3>Observations</h3>
+
+
+  <p>
+Air samples are collected through the NOAA Global Greenhouse Gas Reference Network, which provides samples from up to 80 global background air sites, including some collected at 5 degree latitude intervals from ship routes (see Figure 1).
+  </p>
+
+  <figure>
+    <a href="/aggi/aggi_map.png" title="View full size image"><img class="img-thumbnail img-fluid" src="/aggi/aggi_map.png" alt="Map of sampling sites"></a> 
+    <div class="figure-caption">
+       <b>Figure 1.</b> The NOAA Global Greenhouse Gas Reference Network (GGGRN), where greenhouse gases are measured in ambient air. Results from subsets of these sites are used to determine global background greenhouse gas concentrations and the AGGI. Click on image to view full size figure.
+    </div>
+  </figure>
+
+  <p>
+  Weekly data are used from the most remote sites appearing in Figure 1 to create smoothed north-south latitude profiles from which global averages and trends are calculated (Figure 2). For example, the atmospheric abundance of CO<sub>2</sub> has increased by an average of 1.88 ppm per year over the past 42 years (1979-2021). This increase in CO<sub>2</sub> is accelerating &mdash; while it averaged about 1.6 ppm per year in the 1980s and 1.5 ppm per year in the 1990s, the growth rate increased to 2.4 ppm per year during the last decade (2011-2021). The annual CO<sub>2</sub> increase from 1 Jan 2021 to 1 Jan 2022 was 2.60 &plusmn; 0.08 ppm (see <a href="https://gml.noaa.gov/ccgg/trends/global.html">https://gml.noaa.gov/ccgg/trends/global.html</a>).
+</p>
+
+<p>
+The atmospheric burden of methane has increased more rapidly over the past two years than at any other point in the on-going measurement record, which began in 1983.  The recent rapid increase follows a period from 1999 to 2006 when the atmospheric CH<sub>4</sub> burden was nearly constant. Causes for the recent increase are not fully understood, but warm temperatures in the Arctic in 2007 and increased precipitation in the tropics during 2007 and 2008 <i>[Dlugokencky et al., 2009]</i> contributed in the early years. Isotopic measurements argue for continued increasing microbial emissions after 2008 (e.g., likely from wetlands or agriculture) <i>[Schaefer et al., 2016; Nisbet et al., 2019, Lan et al., 2021]</i>.  Since 2016, the global annual increase in methane has averaged 10.8 &plusmn; 4.3 ppb yr<sup>-1</sup> compared to an average annual increase of 6.9 &plusmn; 3.2 ppb yr<sup>-1</sup> over the preceding 5 years (between 2009 and 2015; <a href="/ccgg/trends_ch4/">https://gml.noaa.gov/ccgg/trends_ch4/</a>). The annual methane increase during 2021 was 16.94 &plusmn; 0.38 ppb and during 2020 it was 15.29 &plusmn; 0.38 ppb.
+</p>
+
+<p>
+The atmospheric burden of nitrous oxide continues to grow over time.  Furthermore, its annual increase, which averaged 1.0 ppb yr<sup>-1</sup> over the past decade, is also increasing. The annual increases measured for N<sub>2</sub>O during 2021 and 2000 are among the fastest recorded since measurements began. Considering other gases, direct radiative forcing from the sum of observed CFC changes ceased increasing in about 2000 and has continued to decline ever since, despite a temporary increase in CFC-11 emissions from 2013 to 2018 <i>[Montzka et al., 2021]</i>. Increases in HCFCs and HFCs have offset the decline from CFCs so that radiative forcing from the sum of these three chemical classes has changed very little over the past decade (+0.01 W m<sup>-2</sup>). These trends are in response to global controls placed on CFC and HCFC production and trade by the fully adjusted and amended <i>Montreal Protocol on Substances that Deplete the Ozone Layer</i>.
+  </p>
+
+  <figure class='text-center'>
+    <a href="/aggi/aggi.fig2.png" title="View full size image"><img class="img-thumbnail img-fluid" src="/aggi/aggi.fig2.png" alt="Figure 2"></a>
+    <div class="figure-caption">
+        <b>Figure 2.</b> 
+<p>Global average abundances of the major, well-mixed, long-lived greenhouse gases - carbon dioxide, methane, nitrous oxide, CFC-12 and CFC-11 - from the NOAA global air sampling network since the beginning of 1979. These five gases account for about 96% of the direct radiative forcing by long-lived greenhouse gases since 1750. The remaining 4% is contributed by 15 other halogenated gases including HCFC-22 and HFC-134a, for which NOAA observations are also shown here. Methane data before 1983 are annual averages from D. Etheridge <i>[Etheridge et al., 1998]</i>, adjusted to the NOAA calibration scale <i>[Dlugokencky et al., 2005]</i>. </p>
+    Click on image to view full size figure.
+    </div>
+  </figure>
+
+  <div class="clear"></div>
+
+
+  <h3>Radiative Forcing Calculations</h3>
+
+  <p>
+  To determine the total radiative forcing of the greenhouse gases for the AGGI, we have used IPCC <i>[Ramaswamy et al., 2001]</i> recommended expressions to convert changes in greenhouse gas global abundance relative to 1750, to instantaneous radiative forcing (see Table 1). (In a <a href='/ccgg/ghgpower/'>separate analysis</a>, we use 1800 as the base year and have added additional gases, but this has little effect on the trend or amount of radiative forcing.) These empirical expressions are derived from atmospheric radiative transfer models and generally have an uncertainty of about 10%. By contrast, uncertainties in the measured global average abundances of the long-lived greenhouse gases are much smaller (&lt;1%). 
+  </p>
+
+  <br>
+
+  <div class="text-center">
+     <strong>Table 1. Expressions for Calculating Radiative Forcing*</strong>
+  </div>
+
+    <table class="table table-bordered table-sm table-header gray-bg">
+      <thead>
+        <tr>
+          <th>Trace Gas</th>
+
+          <th>Simplified Expression<br>
+          Radiative Forcing, &Delta;F (Wm<sup>-2</sup>)</th>
+
+          <th>Constant</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>CO<sub>2</sub></td>
+
+          <td>&Delta;F = &alpha;ln(C/C<sub>o</sub>)</td>
+
+          <td>&alpha; = 5.35</td>
+        </tr>
+
+        <tr>
+          <td>CH<sub>4</sub></td>
+
+          <td>&Delta;F = &beta;(M<sup>&frac12;</sup> - M<sub>o</sub><sup>&frac12;</sup>) -
+          [f(M,N<sub>o</sub>) - f(M<sub>o</sub>,N<sub>o</sub>)]</td>
+
+          <td>&beta; = 0.036</td>
+        </tr>
+
+        <tr>
+          <td>N<sub>2</sub>O</td>
+
+          <td>&Delta;F = &epsilon;(N<sup>&frac12;</sup> - N<sub>o</sub><sup>&frac12;</sup>) -
+          [f(M<sub>o</sub>,N) - f(M<sub>o</sub>,N<sub>o</sub>)]</td>
+
+          <td>&epsilon; = 0.12</td>
+        </tr>
+
+        <tr>
+          <td>Other gases</td>
+
+          <td>&Delta;F = &omega;(X - X<sub>o</sub>)</td>
+
+          <td>&omega; = see notes</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <p>&nbsp;*IPCC (2001)</p>
+
+	    <p>The subscript "o" denotes the unperturbed (1750) global abundance. <br>
+	    Values for &omega; are chemical-specific radiative efficiencies taken from Forster et al. (2007).</p>
+
+            <p>f(M,N) = 0.47ln[1 + 2.01x10<sup>-5</sup> (MN)<sup>0.75</sup> +
+            5.31x10<sup>-15</sup>M(MN)<sup>1.52</sup>]<br></p>
+
+            <p>
+              C is the CO<sub>2</sub> global measured abundance in ppm, M is the same for CH<sub>4</sub> in ppb,<br>
+              N is the same for N<sub>2</sub>O in ppb, X is the same for CFCs in ppb<br>
+            </p>
+
+              <p>C<sub>o</sub> = 278 ppm, M<sub>o</sub> = 722 ppb, N<sub>o</sub> = 270 ppb, X<sub>o</sub> = 0</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <br>
+
+
+  <p>
+Because we seek an index that is accurate, only direct forcing from these gases has been included. Model-dependent feedbacks, for example, due to water vapor and stratospheric ozone depletion, are not included. Other spatially heterogeneous, short-lived, climate forcing agents, such as aerosols and tropospheric ozone, are highly variable and have uncertain global magnitudes and also are not included here to maintain accuracy.
+  </p>
+
+  <h3>2021 Results</h3>
+
+  <p>
+  Figure 3 shows radiative forcing for CO<sub>2</sub>, CH<sub>4</sub>, N<sub>2</sub>O and groupings of gases that capture changes predominantly in the CFCs, HCFCs, and the HFCs through 2021. Carbon dioxide is by far the largest contributor to total forcing from these gases and methane is the second largest contributor.
+  </p>
+
+  <figure class='text-center'>
+    <a href="/aggi/aggi.fig3.png" title="View full size image"><img class="img-thumbnail img-fluid" src="/aggi/aggi.fig3.png" alt="Figure 3"></a>
+    <div class="figure-caption">
+    <p>
+       <b>Figure 3.</b> 
+       Radiative forcing, relative to 1750, of virtually all long-lived greenhouse gases.  The NOAA Annual Greenhouse Gas Index (AGGI), which is indexed to 1 for the year 1990, is shown on the right axis. The “CFC*” grouping includes some other long-lived gases that are not CFCs (e.g., CCl<sub>4</sub>, CH<sub>3</sub>CCl<sub>3</sub>, and Halons), but the CFCs account for the majority (95% in 2021) of this radiative forcing.  The “HCFC” grouping includes the three most abundant of these chemicals (HCFC-22, HCFC-141b, and HCFC-142b). The “HFC*” grouping includes the most abundant HFCs (HFC-134a, HFC-23, HFC-125, HFC-143a, HFC-32, HFC-152a, HFC-227ea, and HFC-365mfc) and SF6 for completeness, although SF6 only accounted for a small fraction of the radiative forcing from this group in 2021 (13%).
+    </p>
+    Click on image to view full size figure.
+  </div>
+  </figure>
+
+  <p>
+  The atmospheric abundance and radiative forcing of the three main long-lived greenhouse gases continue to increase in the atmosphere. While the combined radiative forcing of these and all the other long-lived, well-mixed greenhouse gases included in the AGGI rose 49% from 1990 to 2021 (by ~1.06 watts m<sup>-2</sup>), CO<sub>2</sub> has accounted for about 80% of this increase (~0.85 watts m<sup>-2</sup>), which makes it by far the biggest contributor to increases in climate forcing since 1990. Methane and N<sub>2</sub>O contributed nearly equally to the increase in radiative forcing since 1990 (6.3 and 7.6%).  Had ozone-depleting gases not been regulated by the Montreal Protocol and its amendments, it is estimated that climate forcing would have been as much as 0.3 watt m<sup>-2</sup> greater in 2010 <i>[Velders et al., 2007]</i>, or more than half of the increase in radiative forcing due to CO<sub>2</sub> alone since 1990 . While direct radiative forcing from CFCs and related gases (CFC* in Figure 3) has declined in recent years, the current warming influence from this group of chemicals is still larger than that from HCFCs and HFCs combined. Of the ozone-depleting gases and their substitutes, the largest contributors to direct warming in 2021 were CFC-12, followed by CFC-11, HCFC-22, CFC-113 and HCFC-134a. While the radiative forcing from HFCs has been small relative to other greenhouse gases, the potential for large future increases led to the adoption of controls on HFC production in the Kigali amendment to the Montreal Protocol. The concentration of HCFC-22 in the remote atmosphere surpassed that of CFC-11 by the end of 2015 (Figure 2), but the radiative forcing arising from HCFC-22 is still only 90% of that from CFC-11 because CFC-11 is more efficient at trapping infrared radiation on a per molecule basis.
+  </p>
+
+  <p>
+The Annual Greenhouse Gas Index (AGGI) is calculated as the ratio of total direct radiative forcing due to these gases in a given year to its total in 1990.  1990 was chosen because it is the baseline year for the Kyoto Protocol and the publication year of the first IPCC Scientific Assessment of Climate Change. Most of this increase is related to CO<sub>2</sub>. For 2021, the AGGI was <span class="highlight">1.49</span>, which represents a 49% increase in total direct radiative forcing from human-derived emissions of these gases since 1990.
+  </p>
+
+<p>
+Changes in radiative forcing before 1978 are derived from atmospheric measurements of CO<sub>2</sub>, started by C.D. Keeling <i>[Keeling et al., 1958]</i>, and from measurements of CO<sub>2</sub> and other greenhouse gases in air trapped in snow and ice in Antarctica and Greenland <i>[Etheridge et al., 1996; Butler et al,, 1999]</i>. These results define atmospheric composition changes going back to 1750 and radiative forcing changes since preindustrial times (Figure 4).  This longer-term view shows how increases in greenhouse gas concentrations over the past ~70 years (since 1950) have accounted for three-fourths (72%) of the total increase in the AGGI over the past 260 years.
+</p>
+
+  <figure class="text-center">
+    <a href="/aggi/aggi.fig4.png" title="View full size image"><img class="img-thumbnail img-fluid" src="/aggi/aggi.fig4.png" alt="Figure 4"></a>
+    <div class="figure-caption">
+    <p>
+        <b>Figure 4.</b>  Pre-1978 changes in the CO<sub>2</sub>-equivalent abundance and AGGI based on the ongoing measurements of all greenhouse gases reported here, measurements of CO<sub>2</sub> going back to the 1950s from C.D. Keeling <i>[Keeling et al., 1958]</i>, and atmospheric changes derived from air trapped in ice and snow above glaciers <i>[Machida et al., 1995, Battle et al., 1996, Etheridge, et al., 1996; Butler, et al., 1999]</i>.  Equivalent CO<sub>2</sub> atmospheric amounts (in ppm) are derived with the relationship (Table 1) between CO<sub>2</sub> concentrations and radiative forcing from all long-lived greenhouse gases.
+    </p>
+    Click on image to view full size figure.
+    </div>
+  </figure>
+
+
+  <br>
+
+<div class="text-center">
+	<strong>Table 2. Global Radiative Forcing, CO<sub>2</sub>-equivalent mixing ratio, and the AGGI 1979-2019</strong>
+</div>
+<div class="text-center">
+<div class='table-responsive'>
+<table class='table table-bordered table-condensed table-striped table-header'>
+  <thead>
+   <tr>
+      <th colspan=8>Global Radiative Forcing (W m<sup>-2</sup>)</th>
+      <th>CO<sub>2</sub>-eq<br>(ppm)</th>
+      <th colspan=2>AGGI</th>
+   </tr>
+   <tr>
+      <th>Year</th>
+      <th>CO<sub>2</sub></th>
+      <th>CH<sub>4</sub></th>
+      <th>N<sub>2</sub>O</th>
+      <th>CFCs*</th>
+      <th>HCFCs</th>
+      <th>HFCs*</th>
+      <th>Total</th>
+      <th>Total</th>
+      <th>1990 = 1</th>
+      <th>% change *</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+      <td>1979</td>
+      <td>1.027</td>
+      <td>0.406</td>
+      <td>0.104</td>
+      <td>0.154</td>
+      <td>0.008</td>
+      <td>0.001</td>
+      <td>1.700</td>
+      <td>382</td>
+      <td>0.785</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1980</td>
+      <td>1.060</td>
+      <td>0.413</td>
+      <td>0.104</td>
+      <td>0.163</td>
+      <td>0.009</td>
+      <td>0.001</td>
+      <td>1.749</td>
+      <td>386</td>
+      <td>0.808</td>
+      <td>2.3</td>
+   </tr>
+   <tr>
+      <td>1981</td>
+      <td>1.079</td>
+      <td>0.420</td>
+      <td>0.107</td>
+      <td>0.172</td>
+      <td>0.009</td>
+      <td>0.001</td>
+      <td>1.788</td>
+      <td>388</td>
+      <td>0.825</td>
+      <td>1.8</td>
+   </tr>
+   <tr>
+      <td>1982</td>
+      <td>1.091</td>
+      <td>0.426</td>
+      <td>0.111</td>
+      <td>0.180</td>
+      <td>0.010</td>
+      <td>0.001</td>
+      <td>1.819</td>
+      <td>391</td>
+      <td>0.840</td>
+      <td>1.5</td>
+   </tr>
+   <tr>
+      <td>1983</td>
+      <td>1.117</td>
+      <td>0.429</td>
+      <td>0.113</td>
+      <td>0.190</td>
+      <td>0.011</td>
+      <td>0.001</td>
+      <td>1.861</td>
+      <td>394</td>
+      <td>0.859</td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>1984</td>
+      <td>1.141</td>
+      <td>0.432</td>
+      <td>0.116</td>
+      <td>0.198</td>
+      <td>0.012</td>
+      <td>0.002</td>
+      <td>1.901</td>
+      <td>397</td>
+      <td>0.878</td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>1985</td>
+      <td>1.164</td>
+      <td>0.437</td>
+      <td>0.118</td>
+      <td>0.208</td>
+      <td>0.013</td>
+      <td>0.002</td>
+      <td>1.941</td>
+      <td>400</td>
+      <td>0.896</td>
+      <td>1.8</td>
+   </tr>
+   <tr>
+      <td>1986</td>
+      <td>1.185</td>
+      <td>0.442</td>
+      <td>0.121</td>
+      <td>0.219</td>
+      <td>0.014</td>
+      <td>0.002</td>
+      <td>1.983</td>
+      <td>403</td>
+      <td>0.916</td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>1987</td>
+      <td>1.212</td>
+      <td>0.447</td>
+      <td>0.120</td>
+      <td>0.230</td>
+      <td>0.015</td>
+      <td>0.002</td>
+      <td>2.026</td>
+      <td>406</td>
+      <td>0.936</td>
+      <td>2.0</td>
+   </tr>
+   <tr>
+      <td>1988</td>
+      <td>1.250</td>
+      <td>0.451</td>
+      <td>0.122</td>
+      <td>0.244</td>
+      <td>0.016</td>
+      <td>0.002</td>
+      <td>2.085</td>
+      <td>411</td>
+      <td>0.963</td>
+      <td>2.7</td>
+   </tr>
+   <tr>
+      <td>1989</td>
+      <td>1.274</td>
+      <td>0.455</td>
+      <td>0.126</td>
+      <td>0.254</td>
+      <td>0.017</td>
+      <td>0.002</td>
+      <td>2.130</td>
+      <td>414</td>
+      <td>0.984</td>
+      <td>2.1</td>
+   </tr>
+   <tr>
+      <td>1990</td>
+      <td>1.294</td>
+      <td>0.459</td>
+      <td>0.129</td>
+      <td>0.263</td>
+      <td>0.018</td>
+      <td>0.003</td>
+      <td>2.166</td>
+      <td>417</td>
+      <td>1.000</td>
+      <td>1.6</td>
+   </tr>
+   <tr>
+      <td>1991</td>
+      <td>1.314</td>
+      <td>0.463</td>
+      <td>0.131</td>
+      <td>0.270</td>
+      <td>0.020</td>
+      <td>0.003</td>
+      <td>2.201</td>
+      <td>419</td>
+      <td>1.016</td>
+      <td>1.6</td>
+   </tr>
+   <tr>
+      <td>1992</td>
+      <td>1.325</td>
+      <td>0.467</td>
+      <td>0.133</td>
+      <td>0.276</td>
+      <td>0.021</td>
+      <td>0.003</td>
+      <td>2.226</td>
+      <td>421</td>
+      <td>1.028</td>
+      <td>1.2</td>
+   </tr>
+   <tr>
+      <td>1993</td>
+      <td>1.336</td>
+      <td>0.467</td>
+      <td>0.134</td>
+      <td>0.279</td>
+      <td>0.022</td>
+      <td>0.004</td>
+      <td>2.241</td>
+      <td>423</td>
+      <td>1.035</td>
+      <td>0.7</td>
+   </tr>
+   <tr>
+      <td>1994</td>
+      <td>1.358</td>
+      <td>0.470</td>
+      <td>0.136</td>
+      <td>0.280</td>
+      <td>0.024</td>
+      <td>0.004</td>
+      <td>2.271</td>
+      <td>425</td>
+      <td>1.049</td>
+      <td>1.4</td>
+   </tr>
+   <tr>
+      <td>1995</td>
+      <td>1.385</td>
+      <td>0.472</td>
+      <td>0.136</td>
+      <td>0.281</td>
+      <td>0.025</td>
+      <td>0.004</td>
+      <td>2.305</td>
+      <td>428</td>
+      <td>1.064</td>
+      <td>1.6</td>
+   </tr>
+   <tr>
+      <td>1996</td>
+      <td>1.412</td>
+      <td>0.473</td>
+      <td>0.139</td>
+      <td>0.282</td>
+      <td>0.027</td>
+      <td>0.005</td>
+      <td>2.338</td>
+      <td>430</td>
+      <td>1.079</td>
+      <td>1.5</td>
+   </tr>
+   <tr>
+      <td>1997</td>
+      <td>1.428</td>
+      <td>0.474</td>
+      <td>0.142</td>
+      <td>0.282</td>
+      <td>0.028</td>
+      <td>0.006</td>
+      <td>2.360</td>
+      <td>432</td>
+      <td>1.090</td>
+      <td>1.0</td>
+   </tr>
+   <tr>
+      <td>1998</td>
+      <td>1.467</td>
+      <td>0.478</td>
+      <td>0.144</td>
+      <td>0.282</td>
+      <td>0.029</td>
+      <td>0.006</td>
+      <td>2.407</td>
+      <td>436</td>
+      <td>1.111</td>
+      <td>2.2</td>
+   </tr>
+   <tr>
+      <td>1999</td>
+      <td>1.497</td>
+      <td>0.481</td>
+      <td>0.147</td>
+      <td>0.281</td>
+      <td>0.031</td>
+      <td>0.007</td>
+      <td>2.445</td>
+      <td>439</td>
+      <td>1.129</td>
+      <td>1.8</td>
+   </tr>
+   <tr>
+      <td>2000</td>
+      <td>1.515</td>
+      <td>0.481</td>
+      <td>0.151</td>
+      <td>0.281</td>
+      <td>0.032</td>
+      <td>0.008</td>
+      <td>2.468</td>
+      <td>441</td>
+      <td>1.140</td>
+      <td>1.1</td>
+   </tr>
+   <tr>
+      <td>2001</td>
+      <td>1.538</td>
+      <td>0.480</td>
+      <td>0.153</td>
+      <td>0.280</td>
+      <td>0.034</td>
+      <td>0.009</td>
+      <td>2.494</td>
+      <td>443</td>
+      <td>1.152</td>
+      <td>1.2</td>
+   </tr>
+   <tr>
+      <td>2002</td>
+      <td>1.567</td>
+      <td>0.481</td>
+      <td>0.155</td>
+      <td>0.279</td>
+      <td>0.035</td>
+      <td>0.010</td>
+      <td>2.527</td>
+      <td>446</td>
+      <td>1.167</td>
+      <td>1.5</td>
+   </tr>
+   <tr>
+      <td>2003</td>
+      <td>1.603</td>
+      <td>0.483</td>
+      <td>0.157</td>
+      <td>0.278</td>
+      <td>0.037</td>
+      <td>0.011</td>
+      <td>2.569</td>
+      <td>449</td>
+      <td>1.186</td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>2004</td>
+      <td>1.630</td>
+      <td>0.483</td>
+      <td>0.159</td>
+      <td>0.276</td>
+      <td>0.038</td>
+      <td>0.012</td>
+      <td>2.598</td>
+      <td>452</td>
+      <td>1.200</td>
+      <td>1.3</td>
+   </tr>
+   <tr>
+      <td>2005</td>
+      <td>1.657</td>
+      <td>0.482</td>
+      <td>0.162</td>
+      <td>0.275</td>
+      <td>0.039</td>
+      <td>0.014</td>
+      <td>2.629</td>
+      <td>454</td>
+      <td>1.214</td>
+      <td>1.4</td>
+   </tr>
+   <tr>
+      <td>2006</td>
+      <td>1.688</td>
+      <td>0.482</td>
+      <td>0.165</td>
+      <td>0.274</td>
+      <td>0.041</td>
+      <td>0.015</td>
+      <td>2.664</td>
+      <td>457</td>
+      <td>1.230</td>
+      <td>1.6</td>
+   </tr>
+   <tr>
+      <td>2007</td>
+      <td>1.713</td>
+      <td>0.484</td>
+      <td>0.167</td>
+      <td>0.272</td>
+      <td>0.043</td>
+      <td>0.017</td>
+      <td>2.695</td>
+      <td>460</td>
+      <td>1.244</td>
+      <td>1.4</td>
+   </tr>
+   <tr>
+      <td>2008</td>
+      <td>1.743</td>
+      <td>0.486</td>
+      <td>0.170</td>
+      <td>0.270</td>
+      <td>0.045</td>
+      <td>0.018</td>
+      <td>2.731</td>
+      <td>463</td>
+      <td>1.261</td>
+      <td>1.7</td>
+   </tr>
+   <tr>
+      <td>2009</td>
+      <td>1.763</td>
+      <td>0.489</td>
+      <td>0.172</td>
+      <td>0.268</td>
+      <td>0.046</td>
+      <td>0.020</td>
+      <td>2.758</td>
+      <td>465</td>
+      <td>1.273</td>
+      <td>1.2</td>
+   </tr>
+   <tr>
+      <td>2010</td>
+      <td>1.794</td>
+      <td>0.491</td>
+      <td>0.174</td>
+      <td>0.266</td>
+      <td>0.048</td>
+      <td>0.021</td>
+      <td>2.795</td>
+      <td>469</td>
+      <td>1.290</td>
+      <td>1.7</td>
+   </tr>
+   <tr>
+      <td>2011</td>
+      <td>1.820</td>
+      <td>0.492</td>
+      <td>0.178</td>
+      <td>0.264</td>
+      <td>0.050</td>
+      <td>0.023</td>
+      <td>2.827</td>
+      <td>472</td>
+      <td>1.305</td>
+      <td>1.5</td>
+   </tr>
+   <tr>
+      <td>2012</td>
+      <td>1.848</td>
+      <td>0.494</td>
+      <td>0.181</td>
+      <td>0.263</td>
+      <td>0.051</td>
+      <td>0.025</td>
+      <td>2.860</td>
+      <td>475</td>
+      <td>1.321</td>
+      <td>1.5</td>
+   </tr>
+   <tr>
+      <td>2013</td>
+      <td>1.884</td>
+      <td>0.496</td>
+      <td>0.183</td>
+      <td>0.261</td>
+      <td>0.052</td>
+      <td>0.026</td>
+      <td>2.903</td>
+      <td>478</td>
+      <td>1.341</td>
+      <td>2.0</td>
+   </tr>
+   <tr>
+      <td>2014</td>
+      <td>1.911</td>
+      <td>0.499</td>
+      <td>0.187</td>
+      <td>0.259</td>
+      <td>0.053</td>
+      <td>0.028</td>
+      <td>2.938</td>
+      <td>481</td>
+      <td>1.357</td>
+      <td>1.6</td>
+   </tr>
+   <tr>
+      <td>2015</td>
+      <td>1.942</td>
+      <td>0.504</td>
+      <td>0.190</td>
+      <td>0.257</td>
+      <td>0.054</td>
+      <td>0.030</td>
+      <td>2.978</td>
+      <td>485</td>
+      <td>1.375</td>
+      <td>1.8</td>
+   </tr>
+   <tr>
+      <td>2016</td>
+      <td>1.988</td>
+      <td>0.507</td>
+      <td>0.193</td>
+      <td>0.256</td>
+      <td>0.055</td>
+      <td>0.032</td>
+      <td>3.031</td>
+      <td>490</td>
+      <td>1.400</td>
+      <td>2.5</td>
+   </tr>
+   <tr>
+      <td>2017</td>
+      <td>2.016</td>
+      <td>0.509</td>
+      <td>0.195</td>
+      <td>0.254</td>
+      <td>0.056</td>
+      <td>0.035</td>
+      <td>3.065</td>
+      <td>493</td>
+      <td>1.415</td>
+      <td>1.6</td>
+   </tr>
+   <tr>
+      <td>2018</td>
+      <td>2.047</td>
+      <td>0.512</td>
+      <td>0.199</td>
+      <td>0.253</td>
+      <td>0.057</td>
+      <td>0.037</td>
+      <td>3.104</td>
+      <td>497</td>
+      <td>1.433</td>
+      <td>1.8</td>
+   </tr>
+   <tr>
+      <td>2019</td>
+      <td>2.079</td>
+      <td>0.516</td>
+      <td>0.202</td>
+      <td>0.250</td>
+      <td>0.057</td>
+      <td>0.039</td>
+      <td>3.144</td>
+      <td>500</td>
+      <td>1.452</td>
+      <td>1.8</td>
+   </tr>
+   <tr>
+      <td>2020</td>
+      <td>2.111</td>
+      <td>0.520</td>
+      <td>0.206</td>
+      <td>0.248</td>
+      <td>0.057</td>
+      <td>0.041</td>
+      <td>3.183</td>
+      <td>504</td>
+      <td>1.470</td>
+      <td>1.8</td>
+   </tr>
+   <tr>
+      <td>2021</td>
+      <td>2.140</td>
+      <td>0.526</td>
+      <td>0.210</td>
+      <td>0.246</td>
+      <td>0.058</td>
+      <td>0.044</td>
+      <td>3.222</td>
+      <td>508</td>
+      <td>1.488</td>
+      <td>1.8</td>
+   </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<span class='small'>* for the list of chemicals included in "CFCs*" and "HFCs*" see caption to Figure 3<br>
+* annual change (in %) is calculated relative to 1990<br>
+	e.g., %change Yr2 - Yr1 = 100 * (RFYr2 - RFYr1)/RF1990</span>
+
+
+
+<p>
+
+<a href="/aggi/AGGI_Table.csv">Click here to download this table as comma separated values (csv).</a>
+<br>
+<a href="/aggi/NOAA_MoleFractions_2022.csv">Click here to download measured global annual mean dry-air mole fractions used in deriving the radiative forcing values provided in Table 2 and the AGGI.</a>
+</p>
+
+
+<h3>Acknowledgements</h3>
+<p>
+The core of the AGGI is GML’s high quality data, to which many scientists and technicians at GML have contributed.  Attention to detail, calibration, and quality control are hallmarks of the data that go into deriving the AGGI.  Many of GML’s staff over the years have contributed to the data used for this index.  These include Ed Dlugokencky, Pieter Tans, Andrew Crotwell, Tom Conway, Lee Waterman, Tom Mefford, Patricia Lang, Duane Kitzis, Eric Moglia, Brad Hall, Ben Miller, Rick Myers, Carolina Siso, Isaac Vimont, Matt Gentry, Debbie Mondeel, James Elkins, Thayne Thompson and other former and current GML staff.  We are particularly grateful for our staff and partners worldwide who steadfastly and carefully collect and ship samples on a weekly basis to Boulder for analysis.
+</p>
+
+
+  <h3>References</h3>
+
+<ul class="cite">
+  <li>
+   Battle, M., M. Bender, T. Sowers, P.P. Tans, J.H. Butler, J.W. Elkins, J.T. Ellis, T. Conway, N. Zhang, P. Lang, and A.D. Clarke, (1996) 
+   <b><a href="/publications/showpub.php?pubid=2858">Atmospheric gas concentrations over the past century measured in air from firn at the South Pole,</a></b>
+   <i>Nature,</i> 383, 231-235.
+  </li>
+
+  <li>
+  Butler, J.H., M. Battle, M. Bender, S.A. Montzka, A.D. Clarke, E.S. Saltzman, C. Sucher, J. Severinghaus, J.W. Elkins, (1999),
+  <b> <a href="http://www.nature.com/nature/journal/v399/n6738/abs/399749a0.html">A twentieth century record of atmospheric halocarbons in polar firn air,</a></b>
+  <i> Nature,</i> 399, 749-755.
+  </li>
+  <li>
+  Dlugokencky, E. J., K. A. Masarie, P. M. Lang, and P. P. Tans, (1998)
+  <b>
+  <a href="/publications/showpub.php?pubid=2709">
+  Continuing decline in the growth rate of the atmospheric methane burden,
+  </a>
+  </b>
+  <i>Nature,</i> 393, 447-450.
+  </li>
+
+  <li>
+  Dlugokencky, E. J., S. Houweling, L. Bruhwiler, K. A. Masarie, P. M. Lang, J. B. Miller, and P. P. Tans, (2003),
+  <b>
+  <a href="/publications/showpub.php?pubid=2964">
+  Atmospheric methane levels off: Temporary pause or a new steady-state?,
+  </a>
+  </b> 
+  <i>Geophys. Res. Lett.,</i> 19, doi:10.1029/2003GL018126.</li>
+
+  <li>
+    Dlugokencky, E.J., R.C. Myers, P.M. Lang, K.A. Masarie, A.M. Crotwell, K.W. Thoning, B.D. Hall, J.W. Elkins, and L.P Steele, (2005),
+    <b>
+    <a href="/publications/showpub.php?pubid=436">
+    Conversion of NOAA atmospheric dry air CH4 mole fractions to a gravimetrically-prepared standard scale,
+    </a>
+    </b> 
+    <i>J. Geophys. Res.,</i> 110, D18306, doi:10.1029/2005JD006035.
+  </li>
+
+  <li>
+    Dlugokencky, E.J., L. Bruhwiler, J.W.C. White, L.K. Emmons, P.C. Novelli, S.A. Montzka, K.A. Masarie, P.M. Lang, A.M. Crotwell1, J.B. Miller, and L.V. Gatti, (2009),
+    <b>
+    <a href="/publications/showpub.php?pubid=5051">
+    Observational constraints on recent increases in the atmospheric CH4 burden,
+    </a>
+    </b> 
+    <i>Geophys. Res. Lett., 36, L18803, doi:10.1029/2009GL039780</i>
+  </li>
+
+  <li>
+   Etheridge, D.M., L.P. Steele, R.L. Langenfelds, and R.J. Francey, (1996),
+   <b> Natural and anthropogenic changes in atmospheric CO2 over the last 1000 years from air in Antarctic ice and firn,</b>
+   <i> J. Geophys. Res.</i> 101, 4115–4128.
+   </li>
+
+  <li>
+  Etheridge, D.M., L.P. Steele, R.J. Francey, and R.L. Langenfelds, (1998),
+  <b>
+  Atmospheric methane between 1000 A.D. and present: Evidence of anthropogenic emissions and climate variability, 
+  </b>
+  <i>J. Geophys. Res,</i> *103*, 15,979-15,993.
+  </li>
+
+  <li>
+	  Forster et al., (2007), 
+	  <b>Changes in atmospheric constituents and radiative forcing, Chapter 2 in Climate Change 2007: The Physical Science Basis.</b> 
+	  <i>Cambridge Univ. Press</i>, NY, USA.
+  </li>
+
+  <li>
+  Hofmann, D. J., J. H. Butler, E. J. Dlugokencky, J. W. Elkins, K. Masarie, S. A. Montzka, and P. Tans, (2006a),
+  <b>
+  <a href="/publications/showpub.php?pubid=2876">
+  The role of carbon dioxide in climate forcing from 1979 - 2004: Introduction of the Annual Greenhouse Gas Index,
+  </a>
+  </b> 
+  <i>Tellus B,</i> 58B, 614-619.
+  </li>
+
+  <li>
+  IPCC (2014), 
+  <b>
+  Climate Change 2013: The Physical Science Basis.  
+  </b>
+  <i>Cambridge Univ. Press,</i> Cambridge UK and New York, NY USA.
+  </li>
+
+  <li>
+   Keeling, C.D., (1958), <b>The concentration and isotopic abundances of atmospheric carbon dioxide in rural areas</b>, 
+   <i>Geochimica et Cosmochimica Acta,</i> 13, 322–334.
+  </li>
+
+  <li>
+	  Lan, X., Basu, S., Schwietzke, S., Bruhwiler, L. M. P., Dlugokencky, E. J., Michel, S. E., et al. (2021). <b>Improved constraints on global methane emissions and sinks using &delta;13C-CH4.</b> <i>Global Biogeochemical Cycles</i>, 35, e2021GB007000. https://doi. org/10.1029/2021GB007000.
+  </li>
+
+  <li>
+  Machida, T., T. Nakazawa, Y. Fujii, S. Aoki, and O. Watanabe, (1995), 
+  <b>Increase in the atmospheric nitrous oxide concentration during the last 250 years,</b>
+  <i>Geophys. Res. Lett.,</i> 22, 2921-2924.
+  </li>
+
+  <li>
+  Montzka, S. A., E. J. Dlugokencky, and J. H. Butler, (2011),
+  <b>
+  <a href="/publications/showpub.php?pubid=6620">
+  Non-CO2 greenhouse gases and climate change, 
+  </a>
+  </b>
+  <i>Nature,</i> 476, 43-50.
+  </li>
+
+  <li>
+	  Montzka, Stephen A., <i>et al.</i>, (2021), 
+	  <b>
+  <a href="/publications/showpub.php?pubid=8842">
+		  A decline in global CFC-11 emissions during 2018−2019,
+  </a>
+	  </b>
+	  <i>Nature,</i> 590, 7846, 428-432, 10.1038/s41586-021-03260-5
+  </li>
+
+  <li>
+   Nisbet, E. G., Manning, M. R., Dlugokencky, E. J., Fisher, R. E., Lowry, D., Michel, S. E., et al. (2019) 
+   <b>Very strong atmospheric methane growth in the 4 years 2014–2017: Implications for the Paris Agreement.</b>
+   <i>Global Biogeochemical Cycles</i>, 33, 318–342. https://doi.org/10.1029/2018GB006009.
+  </li>
+
+  <li>
+  Ramaswamy et al., (2001), 
+   <b>
+   Radiative Forcing of Climate Change, Chapter 6 in Climate Change 2001: The Scientific Basis.</b>
+   <i>Cambridge Univ. Press,</i> Cambridge UK and New York, NY USA.
+  </li>
+
+  <li>
+  Schaefer, H., et al. (2016), 
+  <b>A 21st century shift from fossil-fuel to biogenic methane emissions indicated by <sup>13</sup>CH<sub>4</sub>,</b>
+  <i> Science</i>, 352, 80–84.
+  </li>
+
+  <li>
+  Velders, G. J. M., S. O. Andersen, J. S. Daniel, D. W. Fahey, and M. McFarland, (2007),
+  <b>
+  <a href="http://www.pnas.org/content/104/12/4814.abstract">
+  The importance of the Montreal Protocol in protecting climate, 
+  </a>
+  </b>
+  <i>Proc. Nat. Acad. Sciences</i> 104, 4814-4819.
+  </li>
+</ul>
+
+</div>
+</div>
+
+
+</div>
+
+
+<footer class="footer" role="contentinfo">
+
+
+<nav class="navbar navbar-expand-md navbar-footer" >
+
+  <div class="container">
+    <ul class="navbar-nav">
+
+	<li class="footer-content"><a class="nav-link" href="/about/research.html">Research</a></li>
+	<li class="footer-content"><a class="nav-link" href="/dv/data.html">Data</a></li>
+	<li class="footer-content"><a class="nav-link" href="/obop/">Observatory Operations</a></li>
+	<li class="footer-content"><a class="nav-link" href="/education/">Education</a></li>
+	<li class="footer-content"><a class="nav-link" href="/news/">News</a></li>
+	<li class="footer-content"><a class="nav-link" href="/publications/browse.php">Publications</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+  <div class="footer-secondary_section">
+<div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <img class="footer-logo" src="/webdata/logos/noaa-emblem.png" alt="NOAA logo">
+        <p class="footer-logo-heading" style="margin-top: 0;">
+           <a href="http://www.esrl.noaa.gov/">Earth System Research Laboratories</a><br>
+           <a href="/">Global Monitoring Laboratory</a>
+        </p>
+
+        <p><a href="https://www.noaa.gov/protecting-your-privacy">Privacy Policy</a> &nbsp;| &nbsp;
+           <a href="https://www.noaa.gov/accessibility">Accessibility</a> &nbsp;| &nbsp;
+           <a href="/about/disclaimer.html">Disclaimer</a> &nbsp;| &nbsp;
+           <a href="https://www.usa.gov">Usa.gov</a>
+        </p>
+      </div>
+      <div class="col-md-4 footer-right-section">
+<p>
+                <a href="https://www.facebook.com/NOAAESRL" title="ESRL Facebook" aria-label="ESRL Facebook">&nbsp;<i class="fab fa-facebook-f fa-2x social"></i></a>
+                <a href="https://twitter.com/NOAA_ESRL" title="ESRL Twitter" aria-label="ESRL Twitter"> <i class="fab fa-2x fa-twitter social"></i></a>
+                <a href="https://www.youtube.com/user/NOAAESRL" title="ESRL Youtube Channel" aria-label="ESRL Youtube"> <i class="fab fa-2x fa-youtube social"></i></a>
+                <a href="https://www.flickr.com/photos/noaa_esrl" title="ESRL Flickr" aria-label="ESRL Flickr"> <i class="fab fa-2x fa-flickr social"></i></a>
+
+</p>
+          <p><a href="/sitemap">Site Contents</a></p>
+          <p><a href="/about/contacts.html">Contact Us</a> &nbsp;| &nbsp;<a href="mailto:webmaster.gml@noaa.gov">Webmaster</a></p>
+
+      </div>
+    </div>
+        <ol class="breadcrumb hidden-xs" id="minor_footer">
+                <li class="breadcrumb-item" ><a href="https://www.commerce.gov/">U.S. Department of Commerce</a></li>
+                <li class="breadcrumb-item"><a href="http://www.noaa.gov/">National Oceanic &amp; Atmospheric Administration</a></li>
+                <li class="breadcrumb-item"><a href="https://research.noaa.gov/">NOAA Research</a></li>
+        </ol>
+
+  </div>
+  </div>
+
+</footer>
+
+</body>
+
+
+</html>
+
+
